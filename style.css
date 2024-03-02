@@ -1,0 +1,113 @@
+html{
+    background-color: #eef0f3;
+}
+
+#wrapper{
+    margin-top: 14%;
+    display: grid;
+    grid-template: 1fr/1fr 18fr 14fr 1fr;
+}
+
+#wrapper > div:nth-child(1){
+    /*image and text*/
+    grid-column-start: 2;
+    display: flex;
+    flex-flow: column;
+    padding: 3em;
+    font-size: 1.1em;
+
+}
+
+h2{
+    /*welcometext*/
+    all: unset;
+    position: relative;
+    top: -8%;
+    font-size: 1.3em;
+}
+
+#wrapper > div:nth-child(2){
+    /*loginIDbox*/
+    max-width: 21em;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    border-radius: 4%;
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+
+#wrapper > div:nth-child(2) a{
+    /*forgotpass*/
+    all: unset;
+    color: #0865fd;
+    font-size: 0.7em;
+}
+.inpuT{
+    /*idpassLoginCreateAcc*/
+    padding: 0.8em;
+    margin: 0.4em 0;
+    border-radius: 6px;
+}
+
+
+
+#wrapper button{
+    color: white;
+    border-radius: 7px;
+    font-size: 1em;
+    padding: 0.8em;
+    font-weight: bold;
+}
+
+#wrapper > div:nth-child(2) > input{
+    opacity: 40%;
+}
+
+#wrapper > div:nth-child(2) > button:first-of-type{
+    /*login button*/
+    background-color: #0865fd;
+
+}
+
+#line{
+    border: grey 0.1px solid;
+    margin-bottom: 1.3em;
+    opacity: 50%;
+}
+
+#wrapper > div:nth-child(2) > button:last-of-type{
+    /*create new acc button*/
+    align-self: center;
+    background-color: #41b62a;
+    margin: 0 0 -2.4em 0;
+
+}
+
+#lastLine{
+    position: relative;
+    top: 4em;
+}
+
+@media (max-aspect-ratio: 10/9) {
+    body{
+        display: flex;
+    }
+
+    #wrapper {
+        all: unset;
+        display: grid;
+        grid-template: 1fr 1fr/ 1fr;
+        justify-items: center;
+        /*background-color: red;*/
+    }
+    #wrapper > div:nth-child(1){
+        grid-column-start: unset;
+        align-items: center;
+        text-align: center;
+    }
+    #wrapper > div:nth-child(2){
+        margin-top: -2em;
+    }
+}
